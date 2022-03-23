@@ -1,0 +1,192 @@
+Screen 1: User Login
+Task 1: Login
+s1_login
+
+Screen 3,4,5,6: Register users 
+Task 1: Registration
+s3_registration
+s3_create_email
+Screen 15: User take transit
+Task 1: Filter transit
+s15_filter_transit
+Task 2: Log transit
+s15_log_transit
+
+Screen 16: User Transit History
+Task 1: Filter
+s16_filter_history
+s16_transitview
+
+Screen 17: Manage Profile
+Task 1: Update Profile
+S17_MANAGE
+s17_create_email
+
+Screen 18: Manage User
+Task 1: Filter
+User_filter
+S18_Filter(in username varchar(50),in usertype enum('EMPLOYEE', 'EMPLOYEE, VISITOR', 'USER', 'VISITOR'), in status enum("ALL",'PENDING', 'APPROVED', 'Declined'))
+Task 2: Approve
+Approve_user
+S18_Approve(in username varchar(50))
+Task 3: Decline
+Decline_user
+S18_Decline(in username varchar(50))
+
+Screen 19: Manage Site
+Task 1: Filter
+Site_filter
+s19_filterSites(in name varchar(50), in manager varchar(50), in openEveryday enum('Yes', 'No'))
+`s19_siteview`
+Task 2: Create
+Create_new_site
+s21_createSite(in name varchar(50), in zipcode int(5),
+in address varchar(50), in manager varchar(50), in openEveryday enum('Yes', 'No'))
+
+Task 3: Edit
+Edit_site
+s20_editSite(in name varchar(50), in newName varchar(50), in zipcode int(5),
+in address varchar(50), in manager varchar(50), in openEveryday enum('Yes', 'No'))
+
+
+Task 4: Delete
+Delete_site
+s19_deleteSite(in name varchar(50))
+
+
+Screen 22: Manage Transit
+Task 1: Filter
+Transit_filter
+`s22_filterTransit`(in routeType enum('ALL','MARTA', 'Bus', 'Bike'), in transitRoute varchar(15),  in siteName varchar(50), in startPrice int(10), in endPrice int(10))
+`s22_transitview`
+
+Task 2: Create
+Create_new_transit
+`s24_CreateTransit`(in Value longtext, in Routetype enum('Marta', 'Bus', 'Bike'),in transitRoute varchar(15), in price int unsigned, in numberOfsites int unsigned)
+
+Task 3: Edit
+edit_transit
+`s23_EditTransit`(in Value longtext, in Routetype enum('Marta', 'Bus', 'Bike'),
+in OldtransitRoute varchar(15), in NewtransitRoute varchar(15), in price int unsigned)
+Task 4: Delete
+Delete_transit
+`s22_deleteTransit`(in routeType enum('MARTA', 'Bus', 'Bike'), in route varchar(15))
+
+Screen 25: Manage Event
+Task 1: Filter
+Event_filter
+ `s25_filterEvents`(in eventName varchar(100), in description TEXT, in sDate Date, in eDate Date, in sdur int(3), in edur int(3), in sVisits int(3), in eVisits int(3), in sRevenue int(15), in eRevenue int(15), in manager varchar(50))
+`s25_eventfilter`, `s25_eventstaff`,`s25_eventvisitors`
+
+	
+Task 2: Create
+Create_new_event
+`s27_createEvent`(in evname varchar(100), in sDate DATE, in eDate Date, in price int unsigned, in capacity int(3), in minStaffReq int(3), in descrip TEXT, in manager varchar(50), in Value longtext, in staffSelected int(3))
+
+
+
+Task 3: Edit
+Edit_event
+`s26_editEvent`(in sname varchar(100), in sDate DATE, in manager varchar(50), in Value longtext, in staffSelected int(3), in minstaffrequired int(3), in descrip TEXT)
+
+
+
+Task 4: Delete
+Delete_event
+`s25_deleteEvent`(in evname varchar(100), in sDate DATE , 
+in manager varchar(50))
+
+
+
+Task 5: view
+view_event
+`s26_viewEvent`(in evName varchar(100),in sDate Date, in manager varchar(50),in sRevenue int(15), in eRevenue int(15),in sVisits int(15), in eVisits int(15) )
+S25_eventvisitorsdaily: view
+
+
+
+
+		
+
+Screen 28: Manage Staff
+Task 1: Filter
+staff_filter
+
+
+Screen 29: Manage Site Report
+Task 1: Filter
+Filter_site
+s29_filterSites(in sDate Date, in eDate Date, in sEvent int(3), in eEvent int(3), in sStaff int(3), in eStaff int(3),
+in sVisits int(3), in eVisits int(3), in sRevenue int(15), in eRevenue int(15), in manager varchar(50))
+Task 2: Daily Detail
+s30_dailyDetail(in sDate Date,
+in eDate Date,
+ in manager varchar(50))
+
+Screen 31: View Staff Schedule
+Task 1: Filter
+s31_viewSchedule(in eventName varchar(100),
+in description Text,
+in sDate Date,
+in eDate Date,
+in staff varchar(50))
+Task 2: View event
+s32_staffEventDetail(in eventName varchar(100), in description TEXT, in sDate Date, in eDate Date, in staff varchar(50))
+
+
+
+Screen 33: Visitor Explore Event
+Task 1: Filter/View event
+s33_exploreEvent(
+in eventName varchar(50),
+in description TEXT,
+in siteName enum('ALL', 'Atlanta Beltline Center', 'Historic Fourth Ward Park', 'Inman Park', 'Piedmont Park', 'Westview Cemetry'),
+in sDate date,
+in eDate date,
+in sVisit int(3),
+in eVisit int(3),
+in visitorUsername varchar(50))
+
+Screen 34: Visitor Event Detail
+Task 1: Log Visit
+s34_visitorEventDetail(
+in eventName varchar(100),
+in sDate Date,
+in eDate Date)
+
+
+
+Screen 35: Visitor explore site
+Task 1: Filter 
+filter_site
+Task 2: Site Detail
+view_site_detail
+Task 3: Transit Detail
+view_transit_detail
+
+Screen 36: Transit Detail
+Task 1: Log Transit
+visitor_transit_log
+
+Screen 37: Site Detail
+Task 1: Log Site
+visitor_site_log
+
+Screen 38: Visit history
+Task 1: Filter
+filter_visits
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
